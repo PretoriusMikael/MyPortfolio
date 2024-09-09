@@ -1,0 +1,145 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 50px;
+  z-index: 100;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--text);
+  font-family: "Rubik";
+}
+
+nav ul {
+  display: flex;
+  margin-bottom: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li a {
+  position: relative;
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+  transition: transform 0.6s;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .navbar ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.header .navbar ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header .navbar ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.header .navbar ul li .dropdown-content li {
+  display: block;
+}
+
+.header .navbar ul li .dropdown-content li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.header .navbar ul li:hover .dropdown-content {
+  display: block;
+}
+
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: var(--accent);
+  border: solid 1px #e8e8e82d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: var(--primary);
+  border: solid 1px #01e0572d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}

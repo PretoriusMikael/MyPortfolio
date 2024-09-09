@@ -1,4 +1,7 @@
 import React from "react";
+import image from "../assets/downloads/Mikael Pretorius CV.pdf";
+import { Link } from "react-router-dom";
+import "../styling/Header.css";
 
 const Header = () => {
   return (
@@ -6,8 +9,22 @@ const Header = () => {
       <header class="header">
         <nav class="navbar">
           <ul>
-            <li>
-              <a href="#About">About</a>
+            <li className="dropdown">
+              <Link to="/">
+                <svg
+                  width="20"
+                  height="12"
+                  viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path d="M10 12l-6-6h12l-6 6z" />
+                </svg>
+                Home
+              </Link>
+              <ul className="dropdown-content">
+                <li>
+                  <Link to="/portfolio">Portfolio</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#services">Services</a>
@@ -15,15 +32,9 @@ const Header = () => {
             <li>
               <a href="#skills">Skills</a>
             </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
           </ul>
         </nav>
-        <a
-          href="Attachments/Mikael Pretorius CV.pdf"
-          download="Mikael Pretorius CV.pdf"
-          class="download-button">
+        <a href={image} download="Mikael Pretorius CV" class="download-button">
           <div class="docs">
             <svg
               class="css-i6dzq1"

@@ -1,4 +1,8 @@
 import React from "react";
+import webDevImg from "../assets/images/Web developer.jpg";
+import softwareEngImg from "../assets/images/Software-Engineering.jpg";
+import videoEditImg from "../assets/images/Video editing.jpg";
+import "../styling/Home.css";
 
 const Home = () => {
   return (
@@ -6,8 +10,8 @@ const Home = () => {
       <section class="bio">
         <h1 id="About">Get to know me...</h1>
         <p class="bio-text">
-          Hi, <strong>I'm Mikael Pretorius!</strong>I believe my achievements in
-          the launch of the Stellenbosch Universities' eSports club, winning
+          Hi, <strong>I'm Mikael Pretorius! </strong>I believe my achievements
+          in the launch of the Stellenbosch Universities' eSports club, winning
           USSA championships and receiving a sports bursary highlight my
           leadership, teamwork and commitment to excellence. My diverse skill
           set, academic background and involvement in various clubs displays my
@@ -26,7 +30,7 @@ const Home = () => {
         <section class="services-list">
           <div class="card-container">
             <div class="card">
-              <img src="Images/Web developer.jpg" />
+              <img src={webDevImg} alt="Web Developer" />
               <div class="content">
                 <h4>Web Development</h4>
                 <p>Lorem ipsum dolor</p>
@@ -34,7 +38,7 @@ const Home = () => {
               </div>
             </div>
             <div class="card">
-              <img src="Images/Software-Engineering.jpg" />
+              <img src={softwareEngImg} />
               <div class="content">
                 <h4>Software Engineering</h4>
                 <p>Lorem ipsum dolor</p>
@@ -42,7 +46,7 @@ const Home = () => {
               </div>
             </div>
             <div class="card">
-              <img src="Images/Video editing.jpg" />
+              <img src={videoEditImg} />
               <div class="content">
                 <h4>Video Editing</h4>
                 <p>Lorem ipsum dolor</p>
@@ -85,6 +89,24 @@ const Home = () => {
                   <span class="bar">
                     <span class="sql"></span>
                   </span>
+                </li>
+                <li>
+                  <h4>React</h4>
+                  <span class="bar">
+                    <span class="react"></span>
+                  </span>
+                </li>
+                <li>
+                  <h4>Express</h4>
+                  <span class="bar">
+                    <span class="express"></span>
+                  </span>
+                  <li>
+                    <h4>MongoDB</h4>
+                    <span class="bar">
+                      <span class="mongodb"></span>
+                    </span>
+                  </li>
                 </li>
               </ul>
               <ul class="other-skills">
