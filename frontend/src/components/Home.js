@@ -10,18 +10,22 @@ const Home = () => {
       <section class="bio">
         <h1 id="About">Get to know me...</h1>
         <p class="bio-text">
-          Hi, <strong>I'm Mikael Pretorius! </strong>I believe my achievements
-          in the launch of the Stellenbosch Universities' eSports club, winning
-          USSA championships and receiving a sports bursary highlight my
-          leadership, teamwork and commitment to excellence. My diverse skill
-          set, academic background and involvement in various clubs displays my
-          determination and willingness to collaborate. I have a robust
-          combination of academic excellence, practical skills and notable
-          achievements in the field of eSports and Information Systems
-          management. My dedication and success in team environments make me a
-          valuable member of a team. I have a passion for computers and IT. I
-          have excellent knowledge of hardware and software and am efficient at
-          data handling and general computer operations.
+          Hi, <strong>I'm Mikael Pretorius! </strong>I’m a passionate and driven
+          Full Stack Developer, with a track record of mastering web development
+          technologies quickly and efficiently. With expertise in JavaScript,
+          HTML, CSS, React, Node.js, Express and MongoDB, I thrive on crafting
+          intuitive websites and applications. Whether it's building a
+          user-friendly portfolio, a Netflix sign-in page clone, or a
+          full-fledged iTunes search app, I approach every project with a focus
+          on clean, efficient code and a seamless user experience. A recent
+          graduate of the HyperionDev Full Stack Web Development Bootcamp, I’ve
+          honed my skills across both front-end and back-end development. My
+          experience ranges from creating responsive, interactive web pages to
+          building secure, scalable APIs and databases. I’m also a strong
+          communicator and team player who enjoys collaborating to solve complex
+          problems and deliver innovative solutions. I’m constantly looking for
+          opportunities to grow, learn, and bring my enthusiasm for web
+          development to new challenges.
         </p>
       </section>
 
