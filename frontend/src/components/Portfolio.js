@@ -10,6 +10,7 @@ import BackTodoApp from "../assets/images/backend-todo-app.png";
 import CarInvImg from "../assets/images/car-inventory.png";
 import iTunesSearchImg from "../assets/images/itunes-search.png";
 import "../styling/Portfolio.css";
+import iTunesFiles from "../assets/downloads/L3T08.zip";
 
 const Portfolio = () => {
   return (
@@ -189,7 +190,7 @@ const Portfolio = () => {
 
           <div class="portfolio-card">
             <h4>
-              <b>iTunes Search App</b>
+              <b>iTunes Search App (Downloadable)</b>
             </h4>
             <img src={iTunesSearchImg} alt="iTunes Search App" />
             <div class="portfolio-content">
@@ -200,7 +201,7 @@ const Portfolio = () => {
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href="../assets/L3T08.zip" download>
+                  <a target="_blank" href={iTunesFiles} download>
                     Download "iTunes Search App"
                   </a>
                 </li>
