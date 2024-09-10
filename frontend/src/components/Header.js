@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/downloads/Mikael Pretorius CV.pdf";
+import image from "../assets/downloads/Web development CV.pdf";
 import { Link } from "react-router-dom";
 import "../styling/Header.css";
 
@@ -34,7 +34,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <a href={image} download="Mikael Pretorius CV" class="download-button">
+        <a href={image} download="Web development CV" class="download-button">
           <div class="docs">
             <svg
               class="css-i6dzq1"

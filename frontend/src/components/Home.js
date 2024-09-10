@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import webDevImg from "../assets/images/Web developer.jpg";
 import softwareEngImg from "../assets/images/Software-Engineering.jpg";
 import videoEditImg from "../assets/images/Video editing.jpg";
 import "../styling/Home.css";
+import HomeModal from "./HomeModal";
 
 const Home = () => {
+  const [modalContent, setModalContent] = useState(null);
+
+  const openModal = (content) => {
+    setModalContent(content);
+  };
+
+  const closeModal = () => {
+    setModalContent(null);
+  };
+
   return (
     <div>
-      <section class="bio">
+      <section className="bio">
         <h1 id="About">Get to know me...</h1>
-        <p class="bio-text">
-          Hi, <strong>I'm Mikael Pretorius! </strong>I’m a passionate and driven
+        <p className="bio-text">
+          Hi, <strong>I'm Mikael Pretorius!</strong> I’m a passionate and driven
           Full Stack Developer, with a track record of mastering web development
           technologies quickly and efficiently. With expertise in JavaScript,
-          HTML, CSS, React, Node.js, Express and MongoDB, I thrive on crafting
+          HTML, CSS, React, Node.js, Express, and MongoDB, I thrive on crafting
           intuitive websites and applications. Whether it's building a
           user-friendly portfolio, a Netflix sign-in page clone, or a
           full-fledged iTunes search app, I approach every project with a focus
@@ -31,89 +42,95 @@ const Home = () => {
 
       <div id="services">
         <h2>Services</h2>
-        <section class="services-list">
-          <div class="card-container">
-            <div class="card">
+        <section className="services-list">
+          <div className="card-container">
+            <div className="card">
               <img src={webDevImg} alt="Web Developer" />
-              <div class="content">
+              <div className="content">
                 <h4>Web Development</h4>
-                <p>Lorem ipsum dolor</p>
-                <a href="#">Read More</a>
+                <p>Web applications</p>
+                <a href="#services" onClick={() => openModal("webDev")}>
+                  Read More
+                </a>
               </div>
             </div>
-            <div class="card">
-              <img src={softwareEngImg} />
-              <div class="content">
+            <div className="card">
+              <img src={softwareEngImg} alt="Software Engineering" />
+              <div className="content">
                 <h4>Software Engineering</h4>
-                <p>Lorem ipsum dolor</p>
-                <a href="#">Read More</a>
+                <p>Projects using Python and SQL</p>
+                <a href="#services" onClick={() => openModal("softwareEng")}>
+                  Read More
+                </a>
               </div>
             </div>
-            <div class="card">
-              <img src={videoEditImg} />
-              <div class="content">
+            <div className="card">
+              <img src={videoEditImg} alt="Video Editing" />
+              <div className="content">
                 <h4>Video Editing</h4>
-                <p>Lorem ipsum dolor</p>
-                <a href="#">Read More</a>
+                <p>Short & Long video editing</p>
+                <a href="#services" onClick={() => openModal("videoEdit")}>
+                  Read More
+                </a>
               </div>
             </div>
           </div>
         </section>
         <div id="skills">
-          <div class="skills">
+          <div className="skills">
             <h3>Skills:</h3>
-            <div class="skills-container">
-              <ul class="skills-list">
+            <div className="skills-container">
+              <ul className="skills-list">
                 <li>
                   <h4>Python</h4>
-                  <span class="bar">
-                    <span class="python"></span>
+                  <span className="bar">
+                    <span className="python"></span>
                   </span>
                 </li>
                 <li>
                   <h4>HTML</h4>
-                  <span class="bar">
-                    <span class="html"></span>
+                  <span className="bar">
+                    <span className="html"></span>
                   </span>
                 </li>
                 <li>
                   <h4>CSS</h4>
-                  <span class="bar">
-                    <span class="css"></span>
+                  <span className="bar">
+                    <span className="css"></span>
                   </span>
                 </li>
                 <li>
                   <h4>JavaScript</h4>
-                  <span class="bar">
-                    <span class="javascript"></span>
+                  <span className="bar">
+                    <span className="javascript"></span>
                   </span>
                 </li>
                 <li>
                   <h4>SQL</h4>
-                  <span class="bar">
-                    <span class="sql"></span>
+                  <span className="bar">
+                    <span className="sql"></span>
                   </span>
                 </li>
                 <li>
                   <h4>React</h4>
-                  <span class="bar">
-                    <span class="react"></span>
+                  <span className="bar">
+                    <span className="react"></span>
                   </span>
                 </li>
                 <li>
                   <h4>Express</h4>
-                  <span class="bar">
-                    <span class="express"></span>
+                  <span className="bar">
+                    <span className="express"></span>
                   </span>
-                  <li>
-                    <h4>MongoDB</h4>
-                    <span class="bar">
-                      <span class="mongodb"></span>
-                    </span>
-                  </li>
+                </li>
+                <li>
+                  <h4>MongoDB</h4>
+                  <span className="bar">
+                    <span className="mongodb"></span>
+                  </span>
                 </li>
               </ul>
-              <ul class="other-skills">
+              <ul className="other-skills">
                 <li>Leadership</li>
                 <li>Communication</li>
                 <li>Adaptability</li>
@@ -126,6 +143,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <HomeModal content={modalContent} onClose={closeModal} />
     </div>
   );
 };

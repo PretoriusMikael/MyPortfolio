@@ -69,7 +69,7 @@ const Portfolio = () => {
             <h4>
               <b>Weather App</b>
             </h4>
-            <img src={WeatherAppImg} alt="Netflix clone" />
+            <img src={WeatherAppImg} alt="Weather app" />
             <div class="portfolio-content">
               <p>
                 <li>
@@ -93,7 +93,7 @@ const Portfolio = () => {
             <h4>
               <b>Nationality Predictor</b>
             </h4>
-            <img src={NationalityImg} alt="Netflix clone" />
+            <img src={NationalityImg} alt="Nationality Predictor" />
             <div class="portfolio-content">
               <p>
                 <li>
@@ -115,13 +115,13 @@ const Portfolio = () => {
 
           <div class="portfolio-card">
             <h4>
-              <b>Online Store</b>
+              <b>Online Store (Viewable as website)</b>
             </h4>
-            <img src={OnlineStoreImg} alt="Netflix clone" />
+            <img src={OnlineStoreImg} alt="Online Store" />
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
+                  <a target="_blank" href="https://mock-web-store.onrender.com">
                     View "Online Store"
                   </a>
                 </li>
@@ -141,7 +141,7 @@ const Portfolio = () => {
             <h4>
               <b>Frontend - To Do App</b>
             </h4>
-            <img src={FrontTodoApp} alt="Netflix clone" />
+            <img src={FrontTodoApp} alt="To Do App" />
             <div class="portfolio-content">
               <p>
                 <li>
@@ -165,7 +165,7 @@ const Portfolio = () => {
             <h4>
               <b>Cash Manipulator</b>
             </h4>
-            <img src={CashManImg} alt="Netflix clone" />
+            <img src={CashManImg} alt="Cash Manipulator" />
             <div class="portfolio-content">
               <p>
                 <li>
@@ -191,7 +191,7 @@ const Portfolio = () => {
             <h4>
               <b>iTunes Search App</b>
             </h4>
-            <img src={iTunesSearchImg} alt="Netflix clone" />
+            <img src={iTunesSearchImg} alt="iTunes Search App" />
             <div class="portfolio-content">
               <p>
                 <li>
@@ -200,10 +200,7 @@ const Portfolio = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
+                  <a target="_blank" href="../assets/L3T08.zip" download>
                     Download "iTunes Search App"
                   </a>
                 </li>
@@ -215,7 +212,7 @@ const Portfolio = () => {
             <h4>
               <b>Car Inventory</b>
             </h4>
-            <img src={CarInvImg} alt="Netflix clone" />
+            <img src={CarInvImg} alt="Car Inventory" />
             <div class="portfolio-content">
               <p>
                 <li>
@@ -239,7 +236,7 @@ const Portfolio = () => {
             <h4>
               <b>Backend - To Do App</b>
             </h4>
-            <img src={BackTodoApp} alt="Netflix clone" />
+            <img src={BackTodoApp} alt="To Do App" />
             <div class="portfolio-content">
               <p>
                 <li>
