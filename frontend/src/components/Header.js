@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/downloads/Web development CV.pdf";
+import image from "../assets/downloads/MP - Web Development CV.pdf";
 import { Link } from "react-router-dom";
 import "../styling/Header.css";
 

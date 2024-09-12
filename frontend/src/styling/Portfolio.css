@@ -7,7 +7,7 @@
 #portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin: 50px auto;
 }
 
@@ -19,19 +19,43 @@
 
 .portfolio-card-container {
   display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 50px;
+  flex-wrap: nowrap;
   gap: 20px;
   width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.portfolio-card-container-backend {
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio-card-container {
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 .portfolio-card {
-  flex: 1 1 calc(33% - 20px); /* Adjusted for three cards per row */
+  position: relative;
+  flex: 0 0 calc(33% - 20px); /* Adjusted for three cards per row */
   max-width: 32%;
   padding: 1px;
   box-sizing: border-box;
-  position: relative;
   background-color: var(--secondary);
   overflow: hidden; /* Ensure content does not overflow */
   transition: transform 0.5s ease, background-color 0.4s ease,
@@ -104,4 +128,116 @@
   .portfolio-card {
     flex: 0 1 100%; /* 1 card per row on very small screens */
   }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Base Button Styling */
+.button {
+  margin: 5px;
+  padding: 12px 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple effect on button click */
+.button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+
+.button:active::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+/* Button Variants (Primary and Secondary) */
+.button-primary {
+  background: linear-gradient(
+    135deg,
+    var(--background) 0%,
+    var(--secondary) 100%
+  );
+  border: 1px solid var(--accent);
+}
+
+.button-secondary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+.button-link {
+  background: transparent;
+  color: #2575fc;
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+.button-link:hover {
+  color: var(--background);
+  text-decoration: none;
+  background-color: var(--accent);
+}
+
+/* Additional effects for contrast */
+.button-dark {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+.button-dark:hover {
+  background: linear-gradient(135deg, #314152 0%, #c0bdb8 100%);
+}
+
+/* Container with overflow */
+.portfolio-card-container .portfolio-card-container-backend {
+  overflow-x: auto; /* Horizontal scroll */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+/* WebKit scrollbar styling */
+.portfolio-card-container::-webkit-scrollbar,
+.portfolio-card-container-backend::-webkit-scrollbar {
+  height: 12px; /* Height of the scrollbar */
+}
+
+.portfolio-card-container::-webkit-scrollbar-track,
+.portfolio-card-container-backend::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.portfolio-card-container::-webkit-scrollbar-thumb,
+.portfolio-card-container-backend::-webkit-scrollbar-thumb {
+  background: var(--secondary); /* Scrollbar color */
+  border-radius: 10px; /* Round edges */
+}
+
+.portfolio-card-container::-webkit-scrollbar-thumb:hover,
+.portfolio-card-container-backend::-webkit-scrollbar-thumb:hover {
+  background: var(--accent); /* Scrollbar color on hover */
 }

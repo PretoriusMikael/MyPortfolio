@@ -24,9 +24,9 @@ const Home = () => {
           Hi, <strong>I'm Mikael Pretorius!</strong> I’m a passionate and driven
           Full Stack Developer, with a track record of mastering web development
           technologies quickly and efficiently. With expertise in JavaScript,
-          HTML, CSS, React, Node.js, Express, and MongoDB, I thrive on crafting
-          intuitive websites and applications. Whether it's building a
-          user-friendly portfolio, a Netflix sign-in page clone, or a
+          HTML, CSS, React, Node.js, Express, Python, SQL and MongoDB. I thrive
+          on crafting intuitive websites and applications. Whether it's building
+          a user-friendly portfolio, a Netflix sign-in page clone, or a
           full-fledged iTunes search app, I approach every project with a focus
           on clean, efficient code and a seamless user experience. A recent
           graduate of the HyperionDev Full Stack Web Development Bootcamp, I’ve

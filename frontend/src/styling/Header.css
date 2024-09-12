@@ -55,6 +55,7 @@ nav ul li a::before {
 .header .navbar ul li {
   position: relative;
   display: inline-block;
+  font-family: "Rubik";
 }
 
 .header .navbar ul li a {
@@ -62,30 +63,53 @@ nav ul li a::before {
   padding: 10px;
   display: flex;
   align-items: center;
+  color: var(--text);
+  transition: color 0.3s ease-in-out;
+}
+
+.header .navbar ul li:hover a {
+  color: var(--background);
 }
 
 .header .navbar ul li .dropdown-content {
   display: none;
   position: absolute;
   background-color: var(--secondary);
-  min-width: 160px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
   z-index: 1;
-  border-radius: 5px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.4s ease-in-out;
+  text-align: center;
 }
 
 .header .navbar ul li .dropdown-content li {
   display: block;
 }
 
+.header .navbar ul li .dropdown-content li:hover a {
+  color: var(--background);
+  align-items: center;
+  text-align: center;
+}
+
 .header .navbar ul li .dropdown-content li a {
-  padding: 12px 16px;
+  padding: 10px;
+  color: var(--text);
+  font-size: 16px;
   text-decoration: none;
-  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .header .navbar ul li:hover .dropdown-content {
   display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .download-button {
