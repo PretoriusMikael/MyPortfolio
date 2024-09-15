@@ -305,7 +305,7 @@
 @media (max-width: 480px) {
   #About {
     font-size: 2.5rem;
-    grid-column: 6 / span 14;
+    grid-column: 4 / span 14;
   }
 
   .bio {
