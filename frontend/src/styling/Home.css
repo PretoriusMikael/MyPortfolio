@@ -196,7 +196,7 @@
 }
 
 .python {
-  width: 70%;
+  width: 75%;
   animation: python 3s;
 }
 
@@ -211,7 +211,7 @@
 }
 
 .javascript {
-  width: 67%;
+  width: 78%;
   animation: javascript 3s;
 }
 
@@ -240,7 +240,7 @@
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 75%;
   }
 }
 
@@ -267,7 +267,7 @@
     width: 0%;
   }
   100% {
-    width: 67%;
+    width: 78%;
   }
 }
 

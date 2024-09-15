@@ -1,4 +1,4 @@
-.modal {
+.img-modal {
   position: fixed;
   top: 0;
   left: 100%;
@@ -12,26 +12,25 @@
   z-index: 1000;
 }
 
-.modal.open {
+.img-modal.open {
   left: 0; /* Slides into view */
 }
 
-.modal-content {
+.img-modal-content {
   position: relative;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  max-width: 90vw;
-  max-height: 70vh;
-  display: flex;
+  max-width: 100vw;
+  max-height: 90vh;
   justify-content: center;
   align-items: center;
   width: 90vw;
   height: auto;
 }
 
-.modal-content img {
+.img-modal-content img {
   width: 100%; /* The image will take the full width of the modal */
   max-height: 100%; /* The image will take the full height of the modal */
   object-fit: contain; /* Ensures the image maintains its aspect ratio */

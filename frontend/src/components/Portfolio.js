@@ -10,6 +10,9 @@ import BackTodoApp from "../assets/images/backend-todo-app.png";
 import CarInvImg from "../assets/images/car-inventory.png";
 import iTunesSearchImg from "../assets/images/itunes-search.png";
 import NetflixSigninImg from "../assets/images/netflix-signin.png";
+import weatherAppPreview from "../assets/images/WeatherAppPreview.png";
+import nationalityPredImg from "../assets/images/natpredimg.png";
+import cashManipImg from "../assets/images/cashManip.png";
 import "../styling/Portfolio.css";
 import ImageModal from "./ImageModal.js";
 import iTunesFiles from "../assets/downloads/L3T08.zip";
@@ -18,39 +21,41 @@ import { Link } from "react-router-dom";
 const Portfolio = () => {
   const scrollRef = useRef(null);
   const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState([]);
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({
-      left: -615, // Adjust this value based on card width
+      left: -625, // Adjust this value based on card width
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
     scrollRef.current.scrollBy({
-      left: 615, // Adjust this value based on card width
+      left: 625, // Adjust this value based on card width
       behavior: "smooth",
     });
   };
 
   const openModal = (imageSrc) => {
-    setSelectedImage(imageSrc);
+    console.log(imageSrc);
+    setSelectedImage([imageSrc]);
+    const images = [netflixBackground, chefMealImg];
     setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    setSelectedImage(null);
+    setSelectedImage([]);
   };
 
   const backendHeading = () => {
-    window.location.hash = "#backend-heading";
+    window.location.hash = "#backend-projects";
   };
 
   return (
     <div className="whole">
-      <h2>Frontend Projects</h2>
+      <h2 id="frontend-projects">Frontend Projects</h2>
       <div id="portfolio">
         <div class="button-container">
           <button class="button button-dark" onClick={backendHeading}>
@@ -70,42 +75,15 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <button
-                    className="button button-primary"
-                    onClick={() => openModal(NetflixSigninImg)}>
+                  <a href="#" onClick={() => openModal(NetflixSigninImg)}>
                     View "Netflix clone"
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="button button-primary"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "Netflix clone"
-                  </button>
-                </li>
-              </p>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <h4>
-              <b>Weather App</b>
-            </h4>
-            <img src={WeatherAppImg} alt="Weather app" />
-            <div class="portfolio-content">
-              <p>
-                <li>
-                  <a target="_blank" href="app.html">
-                    View "Weather App"
                   </a>
                 </li>
                 <li>
                   <a
                     target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "Weather App"
+                    href="https://github.com/PretoriusMikael/netflix-clone.git">
+                    Visit "Netflix clone" on GitHub
                   </a>
                 </li>
               </p>
@@ -127,9 +105,9 @@ const Portfolio = () => {
                 <li>
                   <a
                     target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
+                    href="https://github.com/PretoriusMikael/online-store.git"
                     download>
-                    Download "Online Store"
+                    Visit "Online Store" on GitHub
                   </a>
                 </li>
               </p>
@@ -138,22 +116,21 @@ const Portfolio = () => {
 
           <div class="portfolio-card">
             <h4>
-              <b>Chef's Favourite Meals</b>
+              <b>Weather App</b>
             </h4>
-            <img src={chefMealImg} alt="Chef's favourite meals" />
+            <img src={WeatherAppImg} alt="Weather app" />
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a href="#" onClick={() => openModal(chefMealImg)}>
-                    View "Chef's Favourite Meals"
+                  <a href="#" onClick={() => openModal(weatherAppPreview)}>
+                    View "Weather App"
                   </a>
                 </li>
                 <li>
                   <a
                     target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "Chef's Favourite Meals"
+                    href="https://github.com/PretoriusMikael/weather-app.git">
+                    Visit "Weather App" on GitHub
                   </a>
                 </li>
               </p>
@@ -168,16 +145,15 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
+                  <a href="#" onClick={() => openModal(nationalityPredImg)}>
                     View "Nationality Predictor"
                   </a>
                 </li>
                 <li>
                   <a
                     target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "Nationality Predictor"
+                    href="https://github.com/PretoriusMikael/nationality-predictor.git">
+                    Visit "Nationality Predictor" on GitHub
                   </a>
                 </li>
               </p>
@@ -192,16 +168,15 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
+                  <a href="#" onClick={() => openModal(FrontTodoApp)}>
                     View "To Do App"
                   </a>
                 </li>
                 <li>
                   <a
                     target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "To Do App"
+                    href="https://github.com/PretoriusMikael/to-do-app.git">
+                    Visit "To Do App" on GitHub
                   </a>
                 </li>
               </p>
@@ -216,16 +191,15 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
-                    View "Cash Manipulator"
+                  <a href="#" onClick={() => openModal(cashManipImg)}>
+                    View "Cash Manipulator App"
                   </a>
                 </li>
                 <li>
                   <a
                     target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "Cash Manipulator"
+                    href="https://github.com/PretoriusMikael/cash-manipulator.git">
+                    Visit "Cash Manipulator App" on GitHub
                   </a>
                 </li>
               </p>
@@ -239,7 +213,7 @@ const Portfolio = () => {
           &#10095;
         </button>
 
-        <h2 id="backend-heading">Backend Projects</h2>
+        <h2 id="backend-projects">Backend Projects</h2>
 
         <div class="portfolio-card-container-backend">
           <div class="portfolio-card">
@@ -250,12 +224,15 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
+                  <a href="#" onClick={() => openModal(iTunesSearchImg)}>
                     View "iTunes Search App"
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href={iTunesFiles} download>
+                  <a
+                    target="_blank"
+                    href={iTunesFiles}
+                    download="iTunes-search-app">
                     Download "iTunes Search App"
                   </a>
                 </li>
@@ -271,16 +248,8 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
-                    View "Car Inventory"
-                  </a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "Car Inventory"
+                  <a href="#" onClick={() => openModal(CarInvImg)}>
+                    View "Car Inventory App"
                   </a>
                 </li>
               </p>
@@ -295,18 +264,11 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a target="_blank" href="app.html">
-                    View "To Do App"
+                  <a href="#" onClick={() => openModal(BackTodoApp)}>
+                    View "Cash Manipulator App"
                   </a>
                 </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="Attachments/Chef's Favourite Meals.zip"
-                    download>
-                    Download "To Do App"
-                  </a>
-                </li>
+                <li></li>
               </p>
             </div>
           </div>
@@ -314,7 +276,7 @@ const Portfolio = () => {
       </div>
       <ImageModal
         isOpen={isModalOpen}
-        imageSrc={selectedImage}
+        images={selectedImage}
         onClose={closeModal}
       />
     </div>

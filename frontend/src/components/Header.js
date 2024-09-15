@@ -1,9 +1,13 @@
 import React from "react";
 import image from "../assets/downloads/MP - Web Development CV.pdf";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../styling/Header.css";
 
 const Header = () => {
+  const location = useLocation();
+
+  const isPortfolioPage = location.pathname === "/portfolio";
+
   return (
     <div>
       <header class="header">
@@ -26,12 +30,26 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
+            {!isPortfolioPage && (
+              <>
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
+              </>
+            )}
+            {isPortfolioPage && (
+              <>
+                <li>
+                  <a href="#frontend-projects">Frontend</a>
+                </li>
+                <li>
+                  <a href="#backend-projects">Backend</a>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
         <a href={image} download="Web development CV" class="download-button">

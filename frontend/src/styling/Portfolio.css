@@ -115,6 +115,7 @@
   background-color: var(--accent);
   color: var(--background);
   margin-bottom: 10px;
+  border-radius: 3px;
 }
 
 /* Responsive adjustments */
@@ -161,7 +162,7 @@
 /* Ripple effect on button click */
 .button::before {
   content: "";
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   width: 300%;
@@ -189,12 +190,12 @@
 }
 
 .button-secondary {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
 }
 
 .button-link {
   background: transparent;
-  color: #2575fc;
+  color: var(--text);
   text-decoration: underline;
   box-shadow: none;
 }
@@ -202,16 +203,20 @@
 .button-link:hover {
   color: var(--background);
   text-decoration: none;
-  background-color: var(--accent);
+  background-color: var(--primary);
+}
+
+.button-link:active {
+  color: var(--primary); /* Change color when clicked */
 }
 
 /* Additional effects for contrast */
 .button-dark {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
 }
 
 .button-dark:hover {
-  background: linear-gradient(135deg, #314152 0%, #c0bdb8 100%);
+  background: linear-gradient(135deg, #314152 0%, #637283 100%);
 }
 
 /* Container with overflow */
