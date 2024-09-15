@@ -326,7 +326,7 @@
   }
 
   .bio-text.expanded {
-    width: 150%;
+    width: 130%;
     grid-column: 3 / span 10;
   }
 
