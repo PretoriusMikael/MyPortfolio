@@ -62,5 +62,5 @@ html {
 }
 
 .docs {
-  animation: docs 1s infinite;
+  animation: docs 1s 10;
 }

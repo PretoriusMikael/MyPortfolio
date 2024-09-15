@@ -165,13 +165,12 @@ nav ul li a::before {
 
 .download svg polyline,
 .download svg line {
-  animation: docs 1s infinite;
+  animation: docs 1s 2;
 }
 
 /* Basic responsiveness for smaller screens */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
     padding: 10px 20px;
   }
 
@@ -207,7 +206,7 @@ nav ul li a::before {
   }
 
   .download-button {
-    width: 100%;
+    width: 50%;
     text-align: center;
     padding: 10px;
   }
@@ -231,10 +230,10 @@ nav ul li a::before {
   .download-button {
     font-size: 14px;
     padding: 8px;
-    width: 80%;
+    width: 50%;
   }
 
   .download-button .docs {
-    padding: 8px;
+    padding: 2px;
   }
 }
