@@ -24,15 +24,19 @@ const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState([]);
 
   const scrollLeft = () => {
+    const cardWidth =
+      scrollRef.current.querySelector(".portfolio-card").offsetWidth;
     scrollRef.current.scrollBy({
-      left: -625, // Adjust this value based on card width
+      left: -cardWidth - 21, // Scroll by two card widths
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
+    const cardWidth =
+      scrollRef.current.querySelector(".portfolio-card").offsetWidth;
     scrollRef.current.scrollBy({
-      left: 625, // Adjust this value based on card width
+      left: cardWidth + 21, // Adjust this value based on card width
       behavior: "smooth",
     });
   };

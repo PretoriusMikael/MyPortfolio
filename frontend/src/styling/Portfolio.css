@@ -118,19 +118,6 @@
   border-radius: 3px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .portfolio-card {
-    flex: 0 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-card {
-    flex: 0 1 100%; /* 1 card per row on very small screens */
-  }
-}
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -247,13 +234,28 @@
   background: var(--accent); /* Scrollbar color on hover */
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .portfolio-card {
-    flex: 0 0 calc(50% - 20px); /* 2 cards per row */
+    flex: 0 0 50%; /* Show two cards per row on tablets */
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .whole {
+    padding-top: 200px;
+  }
+  .portfolio-card {
+    flex: 0 0 100%; /* This ensures one card takes the full width */
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
+  .whole {
+    padding-top: 200px;
+  }
+
   .portfolio-card {
     flex: 0 0 calc(100% - 20px); /* 1 card per row */
   }

@@ -4,14 +4,18 @@
     url("../assets/images/image1_cropped.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
-  padding-bottom: 165px;
-  padding-top: 165px;
+  padding-bottom: 245px;
+  padding-top: 245px;
 }
 
 .bio {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   gap: 20px;
+}
+
+.bio.no-padding {
+  padding-bottom: 84px;
 }
 
 #services {
@@ -52,6 +56,16 @@
   grid-row: 3;
   font-size: 18px;
   font-family: "SUSE";
+}
+
+.read-more-button {
+  color: blue;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 #Bio {
@@ -288,7 +302,13 @@
 
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
+  #About {
+    font-size: 2.5rem;
+    grid-column: 8 / span 13;
+  }
+
   .bio {
+    margin-top: 200px;
     grid-template-columns: 1fr; /* Stack elements in a single column */
     padding-bottom: 100px; /* Adjust padding */
     padding-top: 100px; /* Adjust padding */
@@ -297,6 +317,7 @@
   .bio-text {
     font-size: 16px; /* Adjust font size for readability */
     padding: 10px; /* Adjust padding */
+    grid-column: 9 / span 11;
   }
 
   .card-container {
@@ -324,18 +345,23 @@
 }
 
 /* For tablets and smaller laptops (up to 768px) */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  #About {
+    font-size: 2.5rem;
+    grid-column: 5 / span 16;
+  }
+
   .bio {
     margin-top: 200px;
-    grid-template-columns: 1fr; /* Stack elements in a single column */
     padding-bottom: 120px; /* Adjust padding */
     padding-top: 120px; /* Adjust padding */
     font-size: 12px;
   }
 
   .bio-text {
-    font-size: 18px; /* Adjust font size for readability */
+    font-size: 16px; /* Adjust font size for readability */
     padding: 15px; /* Adjust padding */
+    grid-column: 6 / span 14;
   }
 
   .card-container {

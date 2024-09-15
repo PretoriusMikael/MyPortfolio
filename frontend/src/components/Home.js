@@ -7,6 +7,7 @@ import HomeModal from "./HomeModal";
 
 const Home = () => {
   const [modalContent, setModalContent] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const openModal = (content) => {
     setModalContent(content);
@@ -16,27 +17,40 @@ const Home = () => {
     setModalContent(null);
   };
 
+  const toggleBio = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div>
-      <section className="bio">
+      <section className={`bio ${isExpanded ? "no-padding" : ""}`}>
         <h1 id="About">Get to know me...</h1>
-        <p className="bio-text">
-          Hi, <strong>I'm Mikael Pretorius!</strong> I’m a passionate and driven
-          Full Stack Developer, with a track record of mastering web development
-          technologies quickly and efficiently. With expertise in JavaScript,
-          HTML, CSS, React, Node.js, Express, Python, SQL and MongoDB. I thrive
-          on crafting intuitive websites and applications. Whether it's building
-          a user-friendly portfolio, a Netflix sign-in page clone, or a
-          full-fledged iTunes search app, I approach every project with a focus
-          on clean, efficient code and a seamless user experience. A recent
-          graduate of the HyperionDev Full Stack Web Development Bootcamp, I’ve
-          honed my skills across both front-end and back-end development. My
-          experience ranges from creating responsive, interactive web pages to
-          building secure, scalable APIs and databases. I’m also a strong
-          communicator and team player who enjoys collaborating to solve complex
-          problems and deliver innovative solutions. I’m constantly looking for
-          opportunities to grow, learn, and bring my enthusiasm for web
-          development to new challenges.
+        <p className={`bio-text ${isExpanded ? "expanded" : ""}`}>
+          {isExpanded
+            ? // Full bio
+              `Hi, I am Mikael Pretorius! I am a passionate and driven
+            Full Stack Developer, with a track record of mastering web development
+            technologies quickly and efficiently. With expertise in JavaScript,
+            HTML, CSS, React, Node.js, Express, Python, SQL and MongoDB. I thrive
+            on crafting intuitive websites and applications. Whether it's building
+            a user-friendly portfolio, a Netflix sign-in page clone, or a
+            full-fledged iTunes search app, I approach every project with a focus
+            on clean, efficient code and a seamless user experience. A recent
+            graduate of the HyperionDev Full Stack Web Development Bootcamp, I have
+            honed my skills across both front-end and back-end development. My
+            experience ranges from creating responsive, interactive web pages to
+            building secure, scalable APIs and databases. I am also a strong
+            communicator and team player who enjoys collaborating to solve complex
+            problems and deliver innovative solutions. I am constantly looking for
+            opportunities to grow, learn, and bring my enthusiasm for web
+            development to new challenges.`
+            : // Shortened bio by default
+              `Hi, I'm Mikael Pretorius! I am a passionate and driven Full Stack Developer, 
+              with a track record of mastering web development technologies quickly and efficiently. 
+              With expertise in JavaScript, HTML, CSS, React, Node.js, Express, Python, SQL and MongoDB...`}
+          <a className="read-more-button" onClick={toggleBio}>
+            {isExpanded ? "Read Less" : "Read More"}
+          </a>
         </p>
       </section>
 
