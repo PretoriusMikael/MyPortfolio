@@ -167,3 +167,73 @@ nav ul li a::before {
 .download svg line {
   animation: docs 1s infinite;
 }
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .header .navbar ul {
+    display: block;
+  }
+
+  .header .navbar ul li {
+    display: block;
+  }
+
+  .header .navbar ul li .dropdown-content {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    width: 100%;
+  }
+
+  .download-button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .download-button .docs {
+    justify-content: center;
+  }
+}
+
+/* For extra-small screens (phones) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .download-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .download-button .docs {
+    padding: 8px;
+  }
+}

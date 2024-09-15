@@ -65,27 +65,6 @@
   grid-row: 2;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    padding: 10px 0;
-  }
-
-  .bio {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .bio-text,
-  #Bio {
-    grid-column: 2 / span 10;
-  }
-}
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -304,5 +283,81 @@
   }
   100% {
     width: 74%;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .bio {
+    grid-template-columns: 1fr; /* Stack elements in a single column */
+    padding-bottom: 100px; /* Adjust padding */
+    padding-top: 100px; /* Adjust padding */
+  }
+
+  .bio-text {
+    font-size: 16px; /* Adjust font size for readability */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .card {
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 0 10px 0; /* Adjust margins */
+  }
+
+  .skills-container {
+    flex-direction: column; /* Stack skills sections vertically */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .skills-list,
+  .other-skills {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .bar span {
+    height: 15px; /* Adjust bar height */
+  }
+}
+
+/* For tablets and smaller laptops (up to 768px) */
+@media (max-width: 768px) {
+  .bio {
+    margin-top: 200px;
+    grid-template-columns: 1fr; /* Stack elements in a single column */
+    padding-bottom: 120px; /* Adjust padding */
+    padding-top: 120px; /* Adjust padding */
+    font-size: 12px;
+  }
+
+  .bio-text {
+    font-size: 18px; /* Adjust font size for readability */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .card {
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 0 15px 0; /* Adjust margins */
+  }
+
+  .skills-container {
+    flex-direction: column; /* Stack skills sections vertically */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .skills-list,
+  .other-skills {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .bar span {
+    height: 18px; /* Adjust bar height */
   }
 }

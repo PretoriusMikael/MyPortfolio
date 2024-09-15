@@ -246,3 +246,29 @@
 .portfolio-card-container-backend::-webkit-scrollbar-thumb:hover {
   background: var(--accent); /* Scrollbar color on hover */
 }
+
+@media (max-width: 768px) {
+  .portfolio-card {
+    flex: 0 0 calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-card {
+    flex: 0 0 calc(100% - 20px); /* 1 card per row */
+  }
+
+  .portfolio-card-container {
+    gap: 15px; /* Reduce gap for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  /* Ensure scrolling remains smooth on touch devices */
+  .portfolio-card-container {
+    scroll-snap-type: x mandatory;
+  }
+
+  .portfolio-card {
+    scroll-snap-align: start;
+  }
+}
