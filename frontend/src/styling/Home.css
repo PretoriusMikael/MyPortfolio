@@ -309,7 +309,7 @@
   }
 
   .bio {
-    margin-top: 45px;
+    margin-top: -55px;
     grid-template-columns: 1fr; /* Stack elements in a single column */
     padding-bottom: 100px; /* Adjust padding */
     padding-top: 100px; /* Adjust padding */
@@ -362,7 +362,7 @@
   }
 
   .bio {
-    margin-top: 100px;
+    margin-top: 80px;
     padding-bottom: 120px; /* Adjust padding */
     padding-top: 120px; /* Adjust padding */
     font-size: 12px;

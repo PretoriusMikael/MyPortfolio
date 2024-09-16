@@ -1,17 +1,26 @@
 import React from "react";
+import { useState } from "react";
 import image from "../assets/downloads/MP - Web Development CV.pdf";
 import { Link, useLocation } from "react-router-dom";
 import "../styling/Header.css";
 
 const Header = () => {
+  const [Show, setShow] = useState(false);
   const location = useLocation();
 
   const isPortfolioPage = location.pathname === "/portfolio";
 
+  const toggleHeader = () => {
+    setShow(!Show);
+  };
+
   return (
     <div>
       <header class="header">
-        <nav class="navbar">
+        <button className="menu-toggle" id="menuToggle" onClick={toggleHeader}>
+          &#9776;
+        </button>
+        <nav className={`navbar ${Show ? "show" : ""}`}>
           <ul>
             <li className="dropdown">
               <Link to="/">

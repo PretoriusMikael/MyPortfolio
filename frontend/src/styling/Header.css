@@ -83,11 +83,12 @@ nav ul li a::before {
   visibility: hidden;
   transform: translateY(-20px);
   transition: all 0.4s ease-in-out;
-  text-align: center;
+  margin-left: -15px;
 }
 
 .header .navbar ul li .dropdown-content li {
   display: block;
+  margin-left: 30px;
 }
 
 .header .navbar ul li .dropdown-content li:hover a {
@@ -168,8 +169,46 @@ nav ul li a::before {
   animation: docs 1s 2;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 /* Basic responsiveness for smaller screens */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header .navbar ul li .dropdown-content {
+    background-color: var(--secondary);
+  }
+
+  nav {
+    display: block; /* Ensure nav is always block but hide content */
+    max-height: 0; /* Start hidden */
+    overflow: hidden;
+    flex-direction: column;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* Make it invisible initially */
+  }
+
+  /* When nav is toggled to show */
+  nav.show {
+    max-height: 500px; /* Adjust as needed for the content height */
+    opacity: 1; /* Make it fully visible */
+  }
+
   .header {
     padding: 10px 20px;
   }
@@ -181,6 +220,11 @@ nav ul li a::before {
 
   nav ul li {
     margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .header .navbar ul li a {
+    margin-left: 70px;
   }
 
   nav ul li a {
@@ -205,6 +249,10 @@ nav ul li a::before {
     width: 100%;
   }
 
+  .download {
+    max-width: 95%;
+  }
+
   .download-button {
     width: 50%;
     text-align: center;
@@ -222,6 +270,58 @@ nav ul li a::before {
     padding: 10px 15px;
   }
 
+  .header .navbar ul li a {
+    margin-top: 5px;
+    margin-left: 50px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header .navbar ul li .dropdown-content {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    width: 100%;
+  }
+
+  .header .navbar ul li {
+    display: block;
+  }
+
+  .header .navbar ul {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav {
+    display: block; /* Ensure nav is always block but hide content */
+    max-height: 0; /* Start hidden */
+    overflow: hidden;
+    flex-direction: column;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* Make it invisible initially */
+  }
+
+  /* When nav is toggled to show */
+  nav.show {
+    max-height: 500px; /* Adjust as needed for the content height */
+    opacity: 1; /* Make it fully visible */
+  }
+
   nav ul li a {
     font-size: 18px;
     margin-right: 20px;
@@ -233,7 +333,11 @@ nav ul li a::before {
     width: 50%;
   }
 
+  .download {
+    max-width: 95%;
+  }
+
   .download-button .docs {
-    padding: 2px;
+    justify-content: space-around;
   }
 }
