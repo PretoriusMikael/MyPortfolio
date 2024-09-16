@@ -35,7 +35,9 @@ const Header = () => {
               </Link>
               <ul className="dropdown-content">
                 <li>
-                  <Link to="/portfolio">Portfolio</Link>
+                  <Link to="/portfolio" onClick={toggleHeader}>
+                    Portfolio
+                  </Link>
                 </li>
               </ul>
             </li>
