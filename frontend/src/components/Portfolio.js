@@ -59,17 +59,17 @@ const Portfolio = () => {
 
   return (
     <div className="whole">
+      <div class="button-container">
+        <button class="button button-dark" onClick={backendHeading}>
+          View Backend
+        </button>
+        <button class="button button-link">
+          <Link to="/">Back to Home</Link>
+        </button>
+      </div>
+
       <h2 id="frontend-projects">Frontend Projects</h2>
       <div id="portfolio">
-        <div class="button-container">
-          <button class="button button-dark" onClick={backendHeading}>
-            View Backend
-          </button>
-          <button class="button button-link">
-            <Link to="/">Back to Home</Link>
-          </button>
-        </div>
-
         <div class="portfolio-card-container" ref={scrollRef}>
           <div class="portfolio-card">
             <h4>
@@ -210,12 +210,14 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <button className="button button-secondary" onClick={scrollLeft}>
-          &#10094;
-        </button>
-        <button className="button button-secondary" onClick={scrollRight}>
-          &#10095;
-        </button>
+        <div className="directional-buttons">
+          <button className="button button-secondary" onClick={scrollLeft}>
+            &#10094;
+          </button>
+          <button className="button button-secondary" onClick={scrollRight}>
+            &#10095;
+          </button>
+        </div>
 
         <h2 id="backend-projects">Backend Projects</h2>
 

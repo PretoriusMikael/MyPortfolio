@@ -44,6 +44,8 @@
   gap: 20px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .portfolio-card-container {
@@ -75,6 +77,7 @@
   object-fit: cover;
   margin-bottom: 10px;
   display: block;
+  min-height: 85%;
 }
 
 .portfolio-content {
@@ -121,6 +124,7 @@
 .button-container {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
 }
 
 /* Base Button Styling */
@@ -185,6 +189,12 @@
   color: var(--text);
   text-decoration: underline;
   box-shadow: none;
+  margin-left: 20px;
+}
+
+.directional-buttons {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .button-link:hover {
