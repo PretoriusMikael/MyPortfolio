@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import webDevImg from "../assets/images/Web developer.jpg";
 import softwareEngImg from "../assets/images/Software-Engineering.jpg";
 import videoEditImg from "../assets/images/Video editing.jpg";
@@ -8,6 +8,10 @@ import HomeModal from "./HomeModal";
 const Home = () => {
   const [modalContent, setModalContent] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const openModal = (content) => {
     setModalContent(content);

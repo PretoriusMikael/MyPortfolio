@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import chefMealImg from "../assets/images/htmlcssjs.png";
 import netflixBackground from "../assets/images/Netflix-Background.jpg";
 import WeatherAppImg from "../assets/images/Apple-Weather-app.webp";
@@ -22,6 +22,10 @@ const Portfolio = () => {
   const scrollRef = useRef(null);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const scrollLeft = () => {
     const cardWidth =
