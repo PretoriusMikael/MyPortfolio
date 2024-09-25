@@ -189,114 +189,85 @@
   background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
 }
 
-.python {
-  width: 75%;
-  animation: python 3s;
-}
-
-.html {
-  width: 87%;
-  animation: html 3s;
-}
-
-.css {
-  width: 90%;
-  animation: css 3s;
-}
-
-.javascript {
-  width: 78%;
-  animation: javascript 3s;
-}
-
-.sql {
-  width: 92%;
-  animation: sql 3s;
-}
-
-.react {
-  width: 78%;
-  animation: react 3s;
-}
-
-.express {
-  width: 67%;
-  animation: express 3s;
-}
-
+.python,
+.html,
+.css,
+.javascript,
+.sql,
+.react,
+.express,
 .mongodb {
-  width: 74%;
-  animation: mongodb 3s;
+  width: 0;
 }
 
 @keyframes python {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 75%;
   }
 }
 
 @keyframes html {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 87%;
   }
 }
 
 @keyframes css {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 90%;
   }
 }
 
 @keyframes javascript {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 78%;
   }
 }
 
 @keyframes sql {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 92%;
   }
 }
 
 @keyframes react {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 78%;
   }
 }
 
 @keyframes express {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 67%;
   }
 }
 
 @keyframes mongodb {
-  0% {
-    width: 0%;
+  from {
+    width: 0;
   }
-  100% {
+  to {
     width: 74%;
   }
 }

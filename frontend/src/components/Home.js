@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import webDevImg from "../assets/images/Web developer.jpg";
 import softwareEngImg from "../assets/images/Software-Engineering.jpg";
 import videoEditImg from "../assets/images/Video editing.jpg";
@@ -11,6 +11,7 @@ const Home = () => {
   const [modalContent, setModalContent] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const skillsRef = useRef(null);
 
   useEffect(() => {
     AOS.init({
@@ -36,6 +37,27 @@ const Home = () => {
     setIsExpanded(!isExpanded);
     setHasAnimated(true);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add class to trigger animation
+            document.querySelectorAll(".bar span").forEach((bar) => {
+              bar.style.animation = `${bar.classList[0]} 3s forwards`;
+            });
+            observer.disconnect(); // Stop observing after animation starts
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+  }, []);
 
   return (
     <div>
@@ -114,7 +136,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <div id="skills">
+
+        <div id="skills" ref={skillsRef}>
           <div className="skills">
             <h3>Skills:</h3>
             <div className="skills-container">
