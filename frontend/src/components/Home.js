@@ -40,12 +40,16 @@ const Home = () => {
   return (
     <div>
       <section className={`bio ${isExpanded ? "no-padding" : ""}`}>
-        <h1 data-aos="fade-down" id="About">
+        <h1
+          data-aos="fade-down"
+          data-aos-anchor-placement="bottom-bottom"
+          id="About">
           Get to know me...
         </h1>
         <p
           className={`bio-text ${isExpanded ? "expanded" : ""}`}
-          data-aos={hasAnimated ? "" : "fade-up"}>
+          data-aos={hasAnimated ? "" : "fade-up"}
+          data-aos-anchor-placement="top-bottom">
           {isExpanded
             ? // Full bio
               `Hi, I am Mikael Pretorius! I am a passionate and driven

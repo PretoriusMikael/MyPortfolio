@@ -3,6 +3,8 @@ import { useState } from "react";
 import image from "../assets/downloads/MP - Web Development CV.pdf";
 import { Link, useLocation } from "react-router-dom";
 import "../styling/Header.css";
+import Swal from "sweetalert2";
+import "sweetalert2/src/sweetalert2.scss";
 
 const Header = () => {
   const [Show, setShow] = useState(false);
@@ -12,6 +14,14 @@ const Header = () => {
 
   const toggleHeader = () => {
     setShow(!Show);
+  };
+
+  const handleDownload = (e) => {
+    Swal.fire({
+      icon: "success",
+      title: "Download Completed",
+      confirmButtonText: "Thank you!",
+    });
   };
 
   return (
@@ -63,7 +73,11 @@ const Header = () => {
             )}
           </ul>
         </nav>
-        <a href={image} download="Web development CV" class="download-button">
+        <a
+          href={image}
+          download="Web development CV"
+          class="download-button"
+          onClick={handleDownload}>
           <div class="docs">
             <svg
               class="css-i6dzq1"
