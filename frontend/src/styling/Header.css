@@ -72,7 +72,7 @@ nav ul li a::before {
 }
 
 .header .navbar ul li .dropdown-content {
-  display: none;
+  visibility: hidden;
   position: absolute;
   background-color: var(--secondary);
   min-width: 100px;
@@ -84,6 +84,7 @@ nav ul li a::before {
   transform: translateY(-20px);
   transition: all 0.4s ease-in-out;
   margin-left: -15px;
+  pointer-events: none;
 }
 
 .header .navbar ul li .dropdown-content li {
@@ -107,10 +108,10 @@ nav ul li a::before {
 }
 
 .header .navbar ul li:hover .dropdown-content {
-  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .download-button {
@@ -282,7 +283,7 @@ nav ul li a::before {
   .header .navbar ul li .dropdown-content {
     position: static;
     box-shadow: none;
-    opacity: 1;
+    opacity: 0;
     visibility: visible;
     transform: none;
     width: 100%;
