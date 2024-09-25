@@ -19,7 +19,7 @@ const Header = () => {
   const handleDownload = (e) => {
     Swal.fire({
       icon: "success",
-      title: "Download Completed",
+      title: "Downloading...",
       confirmButtonText: "Thank you!",
     });
   };
