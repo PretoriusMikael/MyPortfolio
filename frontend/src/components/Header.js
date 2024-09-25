@@ -32,7 +32,7 @@ const Header = () => {
         </button>
         <nav className={`navbar ${Show ? "show" : ""}`}>
           <ul>
-            <li className="dropdown" onClick={toggleHeader}>
+            <li className="dropdown">
               <Link to="/">
                 <svg
                   width="20"
