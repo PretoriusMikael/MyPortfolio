@@ -248,6 +248,11 @@ nav ul li a::before {
     visibility: visible;
     transform: none;
     width: 100%;
+    display: none;
+  }
+
+  .header .navbar ul li:hover .dropdown-content {
+    display: block;
   }
 
   .download {
@@ -289,6 +294,11 @@ nav ul li a::before {
     width: 100%;
     background-color: var(--secondary);
     border-top: solid 1px var(--accent);
+    display: none;
+  }
+
+  .header .navbar ul li:hover .dropdown-content {
+    display: block;
   }
 
   .header .navbar ul li {
