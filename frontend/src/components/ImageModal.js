@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useRef } from "react";
 import "../styling/ImageModal.css";
 
 const ImageModal = ({ isOpen, imageSrc, images, onClose }) => {
@@ -11,7 +10,7 @@ const ImageModal = ({ isOpen, imageSrc, images, onClose }) => {
 
   return (
     <div className={`img-modal ${isOpen ? "open" : ""}`}>
-      <div className="img-modal-content">
+      <div data-aos="fade-down" className="img-modal-content">
         <span className="close" onClick={onClose}>
           &times;
         </span>

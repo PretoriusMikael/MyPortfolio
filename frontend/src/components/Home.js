@@ -4,10 +4,21 @@ import softwareEngImg from "../assets/images/Software-Engineering.jpg";
 import videoEditImg from "../assets/images/Video editing.jpg";
 import "../styling/Home.css";
 import HomeModal from "./HomeModal";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const [modalContent, setModalContent] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      offset: 100, // the distance between the element and the top of the viewport
+      once: true, // whether animation should happen only once
+    });
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,13 +34,18 @@ const Home = () => {
 
   const toggleBio = () => {
     setIsExpanded(!isExpanded);
+    setHasAnimated(true);
   };
 
   return (
     <div>
       <section className={`bio ${isExpanded ? "no-padding" : ""}`}>
-        <h1 id="About">Get to know me...</h1>
-        <p className={`bio-text ${isExpanded ? "expanded" : ""}`}>
+        <h1 data-aos="fade-down" id="About">
+          Get to know me...
+        </h1>
+        <p
+          className={`bio-text ${isExpanded ? "expanded" : ""}`}
+          data-aos={hasAnimated ? "" : "fade-up"}>
           {isExpanded
             ? // Full bio
               `Hi, I am Mikael Pretorius! I am a passionate and driven

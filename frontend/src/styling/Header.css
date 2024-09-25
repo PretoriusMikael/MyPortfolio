@@ -286,10 +286,13 @@ nav ul li a::before {
     visibility: visible;
     transform: none;
     width: 100%;
+    background-color: var(--secondary);
+    border-top: solid 1px var(--accent);
   }
 
   .header .navbar ul li {
     display: block;
+    border-bottom: solid 1px var(--accent);
   }
 
   .header .navbar ul {
@@ -308,12 +311,11 @@ nav ul li a::before {
     flex-direction: column;
     background-color: var(--secondary);
     position: absolute;
-    top: 60px;
+    top: 75px;
     right: 0;
     width: 100%;
     z-index: 1;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    opacity: 0; /* Make it invisible initially */
+    transition: max-height 1.5s ease; /* Make it invisible initially */
   }
 
   /* When nav is toggled to show */

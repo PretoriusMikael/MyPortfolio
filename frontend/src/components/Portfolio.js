@@ -17,11 +17,21 @@ import "../styling/Portfolio.css";
 import ImageModal from "./ImageModal.js";
 import iTunesFiles from "../assets/downloads/L3T08.zip";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = () => {
   const scrollRef = useRef(null);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState([]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      offset: 500, // the distance between the element and the top of the viewport
+      once: false, // whether animation should happen only once
+    });
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
