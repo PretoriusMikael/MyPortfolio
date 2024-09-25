@@ -93,7 +93,9 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a href="#" onClick={() => openModal(NetflixSigninImg)}>
+                  <a
+                    href="#frontend-projects"
+                    onClick={() => openModal(NetflixSigninImg)}>
                     View "Netflix clone"
                   </a>
                 </li>
@@ -140,7 +142,9 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a href="#" onClick={() => openModal(weatherAppPreview)}>
+                  <a
+                    href="#frontend-projects"
+                    onClick={() => openModal(weatherAppPreview)}>
                     View "Weather App"
                   </a>
                 </li>
@@ -163,7 +167,9 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a href="#" onClick={() => openModal(nationalityPredImg)}>
+                  <a
+                    href="#frontend-projects"
+                    onClick={() => openModal(nationalityPredImg)}>
                     View "Nationality Predictor"
                   </a>
                 </li>
@@ -186,7 +192,9 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a href="#" onClick={() => openModal(FrontTodoApp)}>
+                  <a
+                    href="#frontend-projects"
+                    onClick={() => openModal(FrontTodoApp)}>
                     View "To Do App"
                   </a>
                 </li>
@@ -209,7 +217,9 @@ const Portfolio = () => {
             <div class="portfolio-content">
               <p>
                 <li>
-                  <a href="#" onClick={() => openModal(cashManipImg)}>
+                  <a
+                    href="#frontend-projects"
+                    onClick={() => openModal(cashManipImg)}>
                     View "Cash Manipulator App"
                   </a>
                 </li>
